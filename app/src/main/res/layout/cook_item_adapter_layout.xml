@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/q_item_bg"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/cook_item_del"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/q_cook_item_del"/>
+
+    <FrameLayout
+        android:layout_width="124dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/cook_item_image"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/cook_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="简介：这是一个步骤"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</LinearLayout>

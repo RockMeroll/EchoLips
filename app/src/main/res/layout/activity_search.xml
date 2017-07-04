@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:orientation="horizontal">
+
+        <!-- Back Btn -->
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/title_bar_btn_back"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/q_back_arrow"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <!-- Search EditText -->
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="5.0"
+            android:layout_gravity="center">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView1"
+                android:layout_width ="250dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/q_search_input"
+                android:drawableLeft ="@drawable/q_edittext_clear"
+                android:hint         ="请输入文字进行搜索"/>
+
+        </FrameLayout>
+
+        <!-- Search Btn -->
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:layout_gravity="left|center_vertical"
+                android:textSize="18sp"
+                android:textColor="#432511"
+                android:text="搜索"
+
+                android:gravity="center" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/menu_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:divider="#8c8c8c"
+                        android:dividerHeight="1dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab_ablum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="page2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab_top_man"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="page3" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+
+</LinearLayout>

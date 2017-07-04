@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- Setting Btn -->
+    <FrameLayout
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/user_set"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/q_setting" />
+    </FrameLayout>
+
+    <!-- User Info -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="150.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:layout_height="fill_parent">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@drawable/q_author_avatar"
+                android:gravity="center"/>
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0.0dip"
+                android:layout_weight="2.0"
+                android:textSize="20sp"
+                android:gravity="center|left"
+                android:textColor="#000000"
+                android:text="    用户" />
+
+            <TextView
+                android:id="@+id/fragment_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center|left"
+                android:textSize="17sp"
+                android:textColor="#515150"
+                android:text="    姓名" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center|left"
+                android:text="    My Tag" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- User Page Btn -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="75.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout"
+        android:background="@drawable/q_user_button_bg"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="75.0dip"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/btn_cooking_menu"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="@drawable/q_cooking_menu" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="75.0dip"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/btn_albums"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="@drawable/q_albums" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="75.0dip"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/btn_wiki_user"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="@drawable/q_wiki_user" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="75.0dip"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/btn_show"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="@drawable/q_show" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="75.0dip"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/btn_tag"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="@drawable/q_tags" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- User Page Menu -->
+    <ListView
+        android:id="@+id/user_page_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2" />
+
+</RelativeLayout>

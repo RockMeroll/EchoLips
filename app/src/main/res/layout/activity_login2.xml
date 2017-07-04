@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.registered.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/q_reg_bg"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/edit_text_username"
+            android:background="@drawable/q_reg_user_name"
+            android:layout_width="244dp"
+            android:layout_height="35dp"
+            android:hint="手机号/邮箱号"
+            android:textSize="15sp"
+            android:textColor="#959595"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:background="@drawable/q_reg_user_password"
+            android:hint="密码不少于12位"
+            android:layout_width="244dp"
+            android:layout_height="35dp"
+            android:textSize="20dp"
+            android:textColor="#959595"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:paddingRight="30dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="登陆"
+                android:background="@drawable/q_reg_btn_login"
+                />
+
+            <Button
+                android:id="@+id/button_verification"
+                android:layout_width="84dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="注册"
+                android:background="@drawable/q_reg_btn_login"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

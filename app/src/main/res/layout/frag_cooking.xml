@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:orientation="horizontal"
+        android:text="我的收藏"
+        android:gravity="center"
+        android:textColor="#432511"
+        android:textSize="22sp"
+        />
+
+    <ListView
+        android:id="@+id/list_view_star"
+        android:layout_width="match_parent"
+        android:layout_height="430dip">
+    </ListView>
+
+    <Button
+        android:id="@+id/x_star_start_daohang"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="90dp"
+        android:background="@drawable/x_startdaohang" />
+
+</LinearLayout>

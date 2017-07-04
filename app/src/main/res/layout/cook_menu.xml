@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!-- Title Bar -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentLeft="true">
+
+        <FrameLayout
+            android:layout_width="50.0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/title_bar_btn_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/q_back_arrow" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/textView4"
+            android:layout_width="50.0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:background="@drawable/q_btn_share" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="50.0dip"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/textView4">
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/q_shopping_cart" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <!-- content main -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/cook_menu_pic"
+                android:layout_width="fill_parent"
+                android:layout_height="150.0dip"
+                android:textColor="#0a0101"
+                android:textSize="36dp" />
+
+            <TextView
+                android:id="@+id/text_view_title"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#0a0101"
+                android:textSize="23dp" />
+
+            <!-- Tag -->
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/label_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+
+            <ImageView
+                android:id="@+id/cook_menu_avatat"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/q_author_avatar"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="TestUser"
+                android:textColor="#432511" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="24人看过 11人点了赞"
+                android:textColor="#8c8882" />
+
+            <!-- Ingredent -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="65dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_triangle_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30.0dip"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="食材"
+                    android:textColor="#3b3b3b"
+                    android:textSize="20.0dip" />
+
+                <TextView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_triangle_right" />
+
+            </LinearLayout>
+            <!-- Ingredient types -->
+            <LinearLayout
+                android:id="@+id/food_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="70.0dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/q_one_btn_in_shopping_cart"
+                android:gravity="center" />
+
+            <!-- Steps -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="65dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_triangle_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30.0dip"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="步骤"
+                    android:textColor="#3b3b3b"
+                    android:textSize="20.0dip" />
+
+                <TextView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_triangle_right" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+            </LinearLayout>
+
+            <!-- Points -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="65dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_triangle_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30.0dip"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="烹饪要点"
+                    android:textColor="#3b3b3b"
+                    android:textSize="20.0dip" />
+
+                <TextView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_triangle_right" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/points_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/steps_points"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#34322e"
+                    android:textSize="19dp" />
+            </LinearLayout>
+
+            <!-- Adjust btn -->
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="65dp">
+
+                <TextView
+                    android:id="@+id/btn_adjust_in_menu"
+                    android:layout_width="70dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_btn_adjust_in_cooking_menu"
+                    android:gravity="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="你有更好的做法吗? 快来打磨菜谱吧。"
+                    android:textColor="#b5a693"
+                    android:textSize="13dp" />
+            </FrameLayout>
+
+            <!-- Similar Menu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="65dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_triangle_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30.0dip"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="相似菜单"
+                    android:textColor="#3b3b3b"
+                    android:textSize="20.0dip" />
+
+                <TextView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_triangle_right" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="200dp">
+
+                <LinearLayout
+                    android:id="@+id/similar_menu_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:layout_width="70.0dip"
+                            android:layout_height="70.0dip"
+                            android:layout_gravity="center"
+                            android:background="#ddaadd"
+                            android:gravity="center"
+                            android:text="类似菜谱1" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:layout_width="70.0dip"
+                            android:layout_height="70.0dip"
+                            android:layout_gravity="center"
+                            android:background="#ddaadd"
+                            android:gravity="center"
+                            android:text="类似菜谱2" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:layout_width="70.0dip"
+                            android:layout_height="70.0dip"
+                            android:layout_gravity="center"
+                            android:background="#ddaadd"
+                            android:gravity="center"
+                            android:text="类似菜谱3" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:layout_width="70.0dip"
+                            android:layout_height="70.0dip"
+                            android:layout_gravity="center"
+                            android:background="#ddaadd"
+                            android:gravity="center"
+                            android:text="类似菜谱4" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:layout_width="70.0dip"
+                            android:layout_height="70.0dip"
+                            android:layout_gravity="center"
+                            android:background="#ddaadd"
+                            android:gravity="center"
+                            android:text="类似菜谱5" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:layout_width="70.0dip"
+                            android:layout_height="70.0dip"
+                            android:layout_gravity="center"
+                            android:background="#ddaadd"
+                            android:gravity="center"
+                            android:text="类似菜谱6" />
+                    </FrameLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Comments -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:text="    评论(6)"
+                    android:textColor="#000000"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <!-- Avatar -->
+                    <FrameLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_vertical|left"
+                        >
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/q_author_avatar"
+                            android:gravity="center"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical|left"
+                        android:text="    一级棒的菜谱~" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="8"
+                        android:text="       路人甲"
+                        android:textColor="#959595"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:text="2017-02-05"
+                        android:textColor="#959595"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Bar -->
+    <LinearLayout
+        android:id="@+id/cook_menu_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/q_bottom_bar_bg"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.4">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_bottom_btn_repost" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/bottom_btn_star"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bottom_btn_star" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_bottom_btn_like" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.6">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="95dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_bottom_btn_adjust" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/q_bottom_btn_cook"
+                    android:layout_width="95dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/q_bottom_btn_cook" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <!-- Title Bar -->
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:orientation="horizontal">
+
+        <!-- Shopping Cart Btn -->
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/btn_shopping_cart"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/q_shopping_cart"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <!-- Search Btn -->
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="5.0">
+
+            <TextView
+                android:id="@+id/btn_search"
+                android:layout_width="250.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="5.0"
+                android:background="@drawable/q_search"
+                android:gravity="center"
+                android:textIsSelectable="false" />
+        </FrameLayout>
+
+        <!-- Add Cook Menu Btn -->
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/btn_add_cook_menu"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/q_add_cooking_menu"
+                android:gravity="center" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_bar"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="fill_parent"
+                android:layout_height="150.0dip" />
+
+            <!-- Home Page Btn -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="65.0dip"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:id="@+id/btn_rank"
+                        android:layout_width="55.0dip"
+                        android:layout_height="55.0dip"
+                        android:layout_gravity="center"
+                        android:background="@drawable/q_rank"
+                        android:gravity="center" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:id="@+id/btn_category"
+                        android:layout_width="55.0dip"
+                        android:layout_height="55.0dip"
+                        android:layout_gravity="center"
+                        android:background="@drawable/q_category"
+                        android:gravity="center" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:id="@+id/btn_wiki"
+                        android:layout_width="55.0dip"
+                        android:layout_height="55.0dip"
+                        android:layout_gravity="center"
+                        android:background="@drawable/q_wiki"
+                        android:gravity="center" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:id="@+id/btn_top_man"
+                        android:layout_width="55.0dip"
+                        android:layout_height="55.0dip"
+                        android:layout_gravity="center"
+                        android:background="@drawable/q_top_man"
+                        android:gravity="center" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Water Fall -->
+            <!-- LISTVIEW!! -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="130.0dip"
+                    android:background="@drawable/q_water_fall_1"
+                    android:gravity="center"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130.0dip"
+                    android:background="@drawable/q_water_fall_2"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130.0dip"
+                    android:background="@drawable/q_water_fall_3"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130.0dip"
+                    android:background="@drawable/q_water_fall_4"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
